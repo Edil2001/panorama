@@ -2,57 +2,62 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    touch-action: none;
 }
 
 #panorama-viewer {
     width: 100vw;
     height: 100vh;
-}
-
-.back-button {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    padding: 10px 15px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    z-index: 1000;
-    transition: background 0.3s;
+    top: 0;
+    left: 0;
 }
 
-.back-button:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-.nav-buttons {
+.controls {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 0;
+    right: 0;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
     z-index: 1000;
 }
 
-.nav-button {
-    padding: 10px 15px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+.control-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
     border: none;
-    border-radius: 5px;
+    color: #2c3e50;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
+    transition: all 0.2s;
 }
 
-.nav-button:hover {
-    background: rgba(0, 0, 0, 0.8);
+.control-btn:active {
+    transform: scale(0.95);
 }
 
-.close-button {
-    background: rgba(255, 50, 50, 0.7);
+.close-btn {
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
 }
 
-.close-button:hover {
-    background: rgba(255, 50, 50, 0.9);
+@media (max-width: 768px) {
+    .controls {
+        gap: 10px;
+        bottom: 15px;
+    }
+    
+    .control-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
 }
