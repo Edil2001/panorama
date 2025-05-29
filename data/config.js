@@ -66,18 +66,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         document.addEventListener('click', function(e) {
-            if (e.target.classList.contains('next-btn') && currentPanorama < 10) {
+            const btn = e.target.closest('.control-btn');
+            if (!btn) return;
+
+            if (btn.classList.contains('next-btn') && currentPanorama < 10) {
                 loadPanorama(currentPanorama + 1);
             }
-            if (e.target.classList.contains('prev-btn') && currentPanorama > 1) {
+            if (btn.classList.contains('prev-btn') && currentPanorama > 1) {
                 loadPanorama(currentPanorama - 1);
             }
-            if (e.target.classList.contains('close-btn')) {
+            if (btn.classList.contains('close-btn')) {
                 window.location.href = "../index.html";
             }
         });
 
-        // Поддержка свайпов
+      
         let touchStartX = 0;
         const SWIPE_THRESHOLD = 50;
 

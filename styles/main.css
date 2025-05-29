@@ -5,6 +5,37 @@ body {
     background-color: #f0f2f5;
     color: #333;
 }
+.main{
+    margin-top: 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+.header img{
+    width: 80px;
+}
+
+.sectionOne{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 150px;
+    padding-left: 200px;
+    border-bottom: 1px solid black;
+}
+.sectionOne img{
+    width: 600px;
+}
+.sectionOne h1{
+    text-align: left;
+    font-size: 40px;
+}
 
 .container {
     max-width: 100%;
@@ -19,9 +50,11 @@ h1 {
 
 .panorama-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 12px;
     padding: 10px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid black;
 }
 
 .panorama-grid a {
@@ -42,6 +75,30 @@ h1 {
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
+.sectionTwo h2{
+    text-align: center;
+}
+.aboutMain{
+    display: flex;
+    padding: 0 150px 0 200px;
+    gap: 5%;
+}
+
+.sectionThree{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3%;
+}
+.sectionThree img{
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+
 
 @media (max-width: 600px) {
     .panorama-grid {
